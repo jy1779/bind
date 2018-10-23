@@ -1,0 +1,10 @@
+version: '3.0'
+services:
+  bind9:
+    image: sameersbn/bind
+    container_name: bind9
+    network_mode: 'host'
+    volumes:
+      - "./conf:/data/bind/etc"
+    environment:
+      - ROOT_PASSWORD=123456
